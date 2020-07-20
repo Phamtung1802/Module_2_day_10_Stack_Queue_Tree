@@ -6,8 +6,8 @@ import java.util.Iterator;
 
 public class Main {
     public static void main(String[] args) {
-        MyArrayListStack<Integer> intList=new MyArrayListStack<Integer>();
-        MyArrayListStack<String> strList=new MyArrayListStack<String>();
+        MyArrayListStack<Integer> intList=new MyArrayListStack();
+        MyArrayListStack<String> strList=new MyArrayListStack();
 
         for(int i = 0; i<5;i++){
             intList.push(i);
@@ -24,6 +24,6 @@ public class Main {
         System.out.println("List Before "+strList.getAll());
         Collections.reverse(strList.getAll());
         System.out.println("List After "+strList.getAll());
-
+        System.out.println(intList.pop());
     }
 }

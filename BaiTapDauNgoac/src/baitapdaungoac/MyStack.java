@@ -6,6 +6,8 @@ public class MyStack {
     private char[] str;
     private int size;
     private int index = 0;
+    private boolean charRight;//)
+    private boolean charLeft;//(
 
     public MyStack(String str) {
         this.size = str.length();
@@ -48,18 +50,31 @@ public class MyStack {
         return false;
     }
 
-    public Boolean palindrome() throws Exception {
+    public Boolean checkBracket() throws Exception {
         if (this.index == 1) {
             throw new Exception("only one char");
         }
         if (isEmpty()) {
             throw new Exception("not Empty");
         }
-        for (int i = 0, j = this.index - 1; i < j; i++, j--) {
-            if (str[i] != str[j]) {
-                return false;
+        for (int j = this.index - 1;j>=0;j--){
+            //check first ")"
+            if(str[j]==')'){
+                break;
+            }
+            return false;
+        }
+
+        for (int j = this.index - 1;j>=0;j--){
+            //check first ")"
+            if(str[j]==')'){
+                charRight=true;
+            }
+            if (str[j]=='('){
+                charLeft=true;
             }
         }
+
         return true;
     }
 
