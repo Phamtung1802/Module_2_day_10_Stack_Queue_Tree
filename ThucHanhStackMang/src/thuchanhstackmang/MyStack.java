@@ -28,6 +28,7 @@ public class MyStack {
         }
         return false;
     }
+
     public int size() {
         return index;
     }
@@ -36,5 +37,11 @@ public class MyStack {
             return true;
         }
         return false;
+    }
+
+    public void check(){
+        for(int i=0;i<arr.length;i++){
+            System.out.println("phan tu= "+arr[i]);
+        }
     }
 }

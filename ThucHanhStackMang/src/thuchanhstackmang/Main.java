@@ -16,6 +16,8 @@ public class Main {
             System.out.printf(" %d", stack.pop());
         }
 
+
         System.out.println("\n3. Size of stack after pop operations : " + stack.size());
+        stack.check();
     }
 }
