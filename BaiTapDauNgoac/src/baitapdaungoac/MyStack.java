@@ -6,15 +6,13 @@ public class MyStack {
     private char[] str;
     private int size;
     private int index = 0;
-    private boolean charRight;//)
-    private boolean charLeft;//(
+    private boolean charRight=false;//)
+    private boolean charLeft=false;//(
 
     public MyStack(String str) {
         this.size = str.length();
         this.str = new char[size];
-        for (int i = 0; i < str.length(); i++) {
-            this.push(str.charAt(i));
-        }
+
     }
 
     public char pop() throws Exception {
@@ -57,9 +55,11 @@ public class MyStack {
         if (isEmpty()) {
             throw new Exception("not Empty");
         }
+
         for (int j = this.index - 1;j>=0;j--){
             //check first ")"
             if(str[j]==')'){
+
                 break;
             }
             return false;
@@ -73,9 +73,21 @@ public class MyStack {
             if (str[j]=='('){
                 charLeft=true;
             }
+            if(charRight==charLeft){
+                charRight=false;
+                charLeft=false;
+            }
         }
-
-        return true;
+        if (charRight==charLeft) {
+            return true;
+        }
+        else return false;
+    }
+    public String returnComment() throws Exception {
+        if(checkBracket()==true){
+            return "Good";
+        }
+        else return "Wrong";
     }
 
 }
