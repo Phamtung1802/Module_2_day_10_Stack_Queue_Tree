@@ -14,7 +14,9 @@ public class MyArrayListStack<E> {
     }
 
     public void pop(E element) {
-        this.stack.remove(0);
+        if(isEmpty())
+            return;
+        this.stack.remove(this.stack.size());
     }
 
     public boolean isEmpty() {
@@ -25,11 +27,10 @@ public class MyArrayListStack<E> {
     }
 
     public ArrayList<E> getAll(){
+
        return stack;
     }
-
-    public E get(int a){
+    public E get(int a) {
         return stack.get(a);
     }
-
 }
