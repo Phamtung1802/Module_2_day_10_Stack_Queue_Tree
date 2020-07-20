@@ -58,6 +58,18 @@ public class MyStack {
                     push(x);
                     continue;
                 }
+                if (isEmpty())
+                    return false;
+
+                switch (x) {
+                    case ')':
+                        pop();
+                        if (x == '{' || x == '[')
+                            return false;
+                        break;
+                     }
+
+                }
             }
         }
     }
