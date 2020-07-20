@@ -4,38 +4,46 @@ import java.util.LinkedList;
 
 
 public class MyLinkedListQueue<E> {
-    private LinkedList<E> myQueue;
+    private Node<E> head, rear;
 
-    public MyLinkedListQueue(){
-        myQueue=new LinkedList<E>();
+    public MyLinkedListQueue() {
+        this.head = null;
+        this.rear = null;
     }
 
-    public boolean isEmpty(){
-        if (myQueue.size()==0){
-            return true;
+    public void enqueue(int key) {
+        Node temp = new Node(key);
+        if (this.rear == null) {
+            this.head = this.rear = temp;
+            return;
         }
-        return false;
+        this.rear.next = temp;
+        temp.prev=this.rear;
+        this.rear = temp;
+        this.rear.next=this.head;
+        this.head.prev=this.rear;
+
     }
 
-    public LinkedList<E> getAll(){
-        if(isEmpty())
-            throw new EmptyStackException();
-        return myQueue;
+    public Node dequeue() {
+        if (this.head == null)
+            return null;
+        Node temp = this.head;
+        this.head = this.head.next;
+        this.rear.next=this.head;
+        this.head.prev=this.rear;
+        if (this.head == null)
+            this.rear = null;
+
+        return temp;
     }
 
-    public E get(int a){
-        if(isEmpty())
-            throw new EmptyStackException();
-        return myQueue.get(a);
+    public Node getHead(){
+        return this.head;
     }
 
-    public void enQueue(E e){
-        this.myQueue.add(0,e);
+    public Node getRear(){
+        return this.rear;
     }
 
-    public void deQueue(){
-        if(isEmpty())
-            throw new EmptyStackException();
-        this.myQueue.remove(this.myQueue.size()-1);
-    }
 }

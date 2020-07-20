@@ -20,10 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4d12bea-35ad-4181-b5bc-508cd1007226" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/baitapqueuedanhsachvong/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/baitapqueuedanhsachvong/MyLinkedListQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BaiTapDaoNguocMangStack/src/baitapdaonguocmangstack/MyArrayListStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../BaiTapDaoNguocMangStack/src/baitapdaonguocmangstack/MyArrayListStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ThucHanhLinkedListStackUtil/src/thuchanhlinkedliststackutil/MyGenericStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ThucHanhLinkedListStackUtil/src/thuchanhlinkedliststackutil/MyGenericStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/baitapqueuedanhsachvong/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baitapqueuedanhsachvong/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baitapqueuedanhsachvong/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baitapqueuedanhsachvong/MyLinkedListQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/baitapqueuedanhsachvong/MyLinkedListQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThucHanhQueueVaDanhSachLienKet/src/thuchanhqueuevadanhsachlienket/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ThucHanhQueueVaDanhSachLienKet/src/thuchanhqueuevadanhsachlienket/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ThucHanhQueueVaDanhSachLienKet/src/thuchanhqueuevadanhsachlienket/MyLinkedListQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ThucHanhQueueVaDanhSachLienKet/src/thuchanhqueuevadanhsachlienket/MyLinkedListQueue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +53,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ThucHanhLinkedListStackUtil" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ThucHanhQueueVaDanhSachLienKet" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -83,7 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595216306596</updated>
-      <workItem from="1595216310091" duration="2348000" />
+      <workItem from="1595216310091" duration="6286000" />
     </task>
     <servers />
   </component>
@@ -102,9 +104,29 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1595217781554">
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1595220333990">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1595217781554" />
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1595220333990" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1595220431138">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1595220431138" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1595223695925">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595223695925" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1595223695925">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595223695925" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1595223695925">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595223695925" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1595223695925">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595223695925" />
   </component>
 </project>

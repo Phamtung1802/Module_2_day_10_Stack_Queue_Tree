@@ -1,8 +1,8 @@
 package thuchanhqueuevadanhsachlienket;
 
 public class MyLinkedListQueue {
-    private Node head;
-    private Node tail;
+    public Node head;
+    public Node tail;
 
     public MyLinkedListQueue() {
         this.head = null;
@@ -24,6 +24,7 @@ public class MyLinkedListQueue {
             return null;
         Node temp = this.head;
         this.head = this.head.next;
+
         if (this.head == null)
             this.tail = null;
         return temp;

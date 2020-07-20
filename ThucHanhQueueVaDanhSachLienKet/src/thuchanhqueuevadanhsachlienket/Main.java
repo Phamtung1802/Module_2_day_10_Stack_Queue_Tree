@@ -11,5 +11,6 @@ public class Main {
         queue.enqueue(40);
         queue.enqueue(50);
         System.out.println("Dequeued item is " + queue.dequeue().key);
+        System.out.println("New Head item is " + queue.head.next.key);
     }
 }
