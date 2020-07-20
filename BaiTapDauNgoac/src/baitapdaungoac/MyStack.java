@@ -4,13 +4,14 @@ import java.util.ArrayList;
 
 public class MyStack {
     private char[] str;
+    private String input;
     private int size;
     private int index = 0;
-    private boolean charRight=false;//)
-    private boolean charLeft=false;//(
+    char x;
 
     public MyStack(String str) {
-        this.size = str.length();
+        this.size = input.length();
+        this.input=str;
         this.str = new char[size];
 
     }
@@ -49,40 +50,18 @@ public class MyStack {
     }
 
     public Boolean checkBracket() throws Exception {
-        if (this.index == 1) {
-            throw new Exception("only one char");
-        }
-        if (isEmpty()) {
-            throw new Exception("not Empty");
-        }
-
-        for (int j = this.index - 1;j>=0;j--){
-            //check first ")"
-            if(str[j]==')'){
-
-                break;
-            }
-            return false;
-        }
-
-        for (int j = this.index - 1;j>=0;j--){
-            //check first ")"
-            if(str[j]==')'){
-                charRight=true;
-            }
-            if (str[j]=='('){
-                charLeft=true;
-            }
-            if(charRight==charLeft){
-                charRight=false;
-                charLeft=false;
+        if (x == '(' || x == '[' || x == '{') {
+            for (int i = 0; i < input.length(); i++) {
+                char x = this.input.charAt(i);
+                if (x == '(' || x == '[' || x == '{') {
+                    // Push the element in the stack
+                    push(x);
+                    continue;
+                }
             }
         }
-        if (charRight==charLeft) {
-            return true;
-        }
-        else return false;
     }
+
     public String returnComment() throws Exception {
         if(checkBracket()==true){
             return "Good";
