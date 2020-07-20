@@ -3,27 +3,33 @@ package thuchanhpalindrome;
 import java.util.ArrayList;
 
 public class MyStack {
-    private int arr[];
+    private char[] str;
     private int size;
     private int index = 0;
 
-    public MyStack(int size) {
-        this.size = size;
-        arr = new int[size];
+    public MyStack(String str) {
+        this.size = str.length();
+        this.str = new char[size];
+        for (int i = 0; i < str.length(); i++) {
+            this.push(str.charAt(i));
+        }
     }
-    public int pop() throws Exception {
+
+    public char pop() throws Exception {
         if (isEmpty()) {
             throw new Exception("Stack is null");
         }
-        return arr[--index];
+        return str[--index];
     }
-    public void push(int element){
+
+    public void push(char element) {
         if (isFull()) {
             throw new StackOverflowError("Stack is full");
         }
-        arr[index] = element;
+        this.str[index] = element;
         index++;
     }
+
     public boolean isEmpty() {
         if (index == 0) {
             return true;
@@ -34,6 +40,7 @@ public class MyStack {
     public int size() {
         return index;
     }
+
     public boolean isFull() {
         if (index == size) {
             return true;
@@ -41,9 +48,19 @@ public class MyStack {
         return false;
     }
 
-    public void check(){
-        for(int i=0;i<arr.length;i++){
-            System.out.println("phan tu= "+arr[i]);
+    public Boolean palindrome() throws Exception {
+        if (this.index == 1) {
+            throw new Exception("only one char");
         }
+        if (isEmpty()) {
+            throw new Exception("not Empty");
+        }
+        for (int i = 0, j = this.index - 1; i < j; i++, j--) {
+            if (str[i] != str[j]) {
+                return false;
+            }
+        }
+        return true;
     }
+
 }
