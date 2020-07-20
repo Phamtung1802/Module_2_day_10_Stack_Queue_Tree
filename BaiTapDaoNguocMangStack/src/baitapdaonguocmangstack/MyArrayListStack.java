@@ -1,6 +1,7 @@
 package baitapdaonguocmangstack;
 
 import java.util.ArrayList;
+import java.util.EmptyStackException;
 
 public class MyArrayListStack<E> {
    private ArrayList<E> stack;
@@ -13,10 +14,12 @@ public class MyArrayListStack<E> {
         this.stack.add(0,element);
     }
 
-    public void pop(E element) {
+    public E pop() {
         if(isEmpty())
-            return;
-        this.stack.remove(this.stack.size());
+            throw new EmptyStackException();
+        E obj=this.stack.get(this.stack.size()-1);
+        this.stack.remove(this.stack.size()-1);
+        return obj;
     }
 
     public boolean isEmpty() {
@@ -27,7 +30,6 @@ public class MyArrayListStack<E> {
     }
 
     public ArrayList<E> getAll(){
-
        return stack;
     }
     public E get(int a) {
