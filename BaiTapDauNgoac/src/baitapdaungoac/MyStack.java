@@ -10,9 +10,9 @@ public class MyStack {
     char x;
 
     public MyStack(String str) {
-        this.size = input.length();
         this.input=str;
-        this.str = new char[size];
+        this.size = input.length();
+        this.str = new char[this.size];
 
     }
 
