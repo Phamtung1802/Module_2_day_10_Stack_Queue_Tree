@@ -57,21 +57,19 @@ public class MyStack {
                     // Push the element in the stack
                     push(x);
                     continue;
-                }
-                if (isEmpty())
-                    return false;
-
-                switch (x) {
-                    case ')':
+                    if (isEmpty()) {
+                        return false;
+                    }
+                    if (x==')') {
                         pop();
                         if (x == '{' || x == '[')
                             return false;
                         break;
-                     }
-
+                    }
                 }
             }
         }
+        return isEmpty();
     }
 
     public String returnComment() throws Exception {
