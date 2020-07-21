@@ -50,26 +50,25 @@ public class MyStack {
     }
 
     public Boolean checkBracket() throws Exception {
-        if (x == '(' || x == '[' || x == '{') {
-            for (int i = 0; i < input.length(); i++) {
-                char x = this.input.charAt(i);
-                if (x == '(' || x == '[' || x == '{') {
-                    // Push the element in the stack
-                    push(x);
-                    continue;
-                    if (isEmpty()) {
-                        return false;
-                    }
-                    if (x==')') {
-                        pop();
-                        if (x == '{' || x == '[')
-                            return false;
-                        break;
-                    }
+        for (int i = 0; i < input.length(); i++) {
+            char x = this.input.charAt(i);
+            if (x == '(') {
+                push(x);
+                continue;
+            }
+            if (isEmpty())
+                return false;
+            if (x==')'){
+                pop();
+                if (x == '(') {
+                    return false;
                 }
             }
         }
-        return isEmpty();
+        if(isEmpty()==true){
+            return true;
+        }
+        return false;
     }
 
     public String returnComment() throws Exception {
