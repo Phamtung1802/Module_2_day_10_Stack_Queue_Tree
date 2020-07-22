@@ -53,9 +53,11 @@ class TreeNode {
             System.out.print(" " + root.element);
             displayPreOrder(root.left);
             displayPreOrder(root.right);
-
-
         }
+    }
+
+    public boolean searchWithRecursion(){
+        return true;
     }
 
 
