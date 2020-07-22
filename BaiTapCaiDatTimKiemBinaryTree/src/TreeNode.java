@@ -7,8 +7,8 @@ class TreeNode {
 
     public TreeNode(Integer integer) {
         element = integer;
-        this.left=null;
-        this.right=null;
+        this.left = null;
+        this.right = null;
     }
 
     public boolean search(Integer element) {
@@ -27,37 +27,34 @@ class TreeNode {
     }
 
 
-    public String getSide(Integer value){
-        if(this.search(value)==true){
+    public String getSide(Integer value) {
+        if (this.search(value) == true) {
             return "Found";
-        }
-        else return "Not Found";
+        } else return "Not Found";
     }
-    public void displayInOrder(TreeNode root){
-        if(root!=null){
-            displayInOrder(root.left);
-            System.out.print(" " + root.element);
-            displayInOrder(root.right);
-        }
-    }
-    public void displayPostOrder(TreeNode root){
-        if(root!=null){
-            displayInOrder(root.left);
-            displayInOrder(root.right);
-            System.out.print(" " + root.element);
 
+    public void displayInOrder(TreeNode root) {
+        if (root != null) {
+            displayInOrder(root.left);
+            System.out.print(" " + root.element);
+            displayInOrder(root.right);
         }
     }
-    public void displayPreOrder(TreeNode root){
-        if(root!=null){
+
+    public void displayPostOrder(TreeNode root) {
+        if (root != null) {
+            displayInOrder(root.left);
+            displayInOrder(root.right);
+            System.out.print(" " + root.element);
+        }
+    }
+
+    public void displayPreOrder(TreeNode root) {
+        if (root != null) {
             System.out.print(" " + root.element);
             displayPreOrder(root.left);
             displayPreOrder(root.right);
         }
-    }
-
-    public boolean searchWithRecursion(){
-        return true;
     }
 
 
