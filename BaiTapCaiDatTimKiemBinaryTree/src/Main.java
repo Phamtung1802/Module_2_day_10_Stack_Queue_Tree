@@ -10,5 +10,7 @@ public class Main {
         root.displayInOrder(root);
         System.out.println(" ");
         root.displayPostOrder(root);
+        System.out.println(" ");
+        root.displayPreOrder(root);
     }
 }

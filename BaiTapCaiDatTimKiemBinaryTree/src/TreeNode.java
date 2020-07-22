@@ -48,6 +48,16 @@ class TreeNode {
 
         }
     }
+    public void displayPreOrder(TreeNode root){
+        if(root!=null){
+            System.out.print(" " + root.element);
+            displayPreOrder(root.left);
+            displayPreOrder(root.right);
+
+
+        }
+    }
+
 
 }
 
