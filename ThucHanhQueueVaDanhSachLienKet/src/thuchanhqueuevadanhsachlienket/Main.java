@@ -1,5 +1,8 @@
 package thuchanhqueuevadanhsachlienket;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class Main {
     public static void main(String[] args) {
         MyLinkedListQueue queue = new MyLinkedListQueue();
@@ -10,7 +13,15 @@ public class Main {
         queue.enqueue(30);
         queue.enqueue(40);
         queue.enqueue(50);
-        System.out.println("Dequeued item is " + queue.dequeue().key);
-        System.out.println("New Head item is " + queue.head.next.key);
+        queue.enqueue(60);
+        Queue<Node> nodequeue=new LinkedList<Node>();
+        nodequeue.add(new Node(40));
+        nodequeue.add(new Node(50));
+        nodequeue.add(new Node(60));
+        nodequeue.add(new Node(70));
+        System.out.println(nodequeue);
+        System.out.println(nodequeue.size());
+        System.out.println(nodequeue);
+
     }
 }
